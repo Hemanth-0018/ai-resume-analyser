@@ -1,0 +1,9 @@
+{
+  "css.validate": false,
+  "tailwindCSS.experimental.configFile": "tailwind.config.ts",
+  "tailwindCSS.includeLanguages": {
+    "css": "css",
+    "javascriptreact": "html",
+    "typescriptreact": "html"
+  }
+}
