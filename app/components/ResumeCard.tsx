@@ -32,7 +32,7 @@ const ResumeCard=({resume:{id,companyName,jobTitle,feedback,imagePath}}:{resume:
             </div>
             {resumeUrl &&(<div className="gradient-border animate-in fade-in duration-1000">
                 <div className="w-full h-full">
-                    <img src={imagePath} alt="resumecard" className="w-full h-[350px] max-sm:h-[200px] object-cover object-top"/>
+                    <img src={resumeUrl} alt="resumecard" className="w-full h-[350px] max-sm:h-[200px] object-cover object-top"/>
                 </div>
             </div>)}
         </Link>
