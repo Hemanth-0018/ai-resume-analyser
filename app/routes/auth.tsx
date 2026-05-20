@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react'
-import { useLocation, useNavigate } from 'react-router';
 import { usePuterStore } from '~/lib/puter'
+import { useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router';
 export const meta=()=>([
     {title:'Resumizer | Auth'},
     {name:'description',content:'Log into your account'}
 ])
-const auth = () => {
+const Auth = () => {
     const {isLoading,auth}=usePuterStore();
     const location=useLocation();
-    const next=location.search.split('next=')[1];
+    const next=location.search.split('next=')[1]||"/";
     const navigate=useNavigate();
     useEffect(()=>{
         if(auth.isAuthenticated) navigate(next);
-    },[auth.isAuthenticated,next])
+    },[auth.isAuthenticated,next,navigate])
     return (
         <main className="bg-[url('/images/bg-auth.svg')] bg-cover min-h-screen flex items-center justify-center">  
             <div className='gradient-border shadow-lg'>
@@ -47,4 +47,4 @@ const auth = () => {
     )
 }
 
-export default auth
+export default Auth
